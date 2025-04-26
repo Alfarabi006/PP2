@@ -29,7 +29,7 @@ font = pygame.font.SysFont("Verdana", 60)
 font_small = pygame.font.SysFont("Verdana", 20)
 game_over = font.render("Game Over", True, BLACK)
 
-background = pygame.image.load(r"C:\Users\Sauka\OneDrive\Рабочий стол\Lab 8\Car\AnimatedStreet.png")
+background = pygame.image.load(r"C:\Users\User\Desktop\PP2\Lab 8\Car\AnimatedStreet.png")
 
 
 #Create a white screen 
@@ -37,7 +37,7 @@ DISPLAYSURF = pygame.display.set_mode((400,600))
 DISPLAYSURF.fill(WHITE)
 pygame.display.set_caption("Game")
 
-pygame.mixer.music.load(r"C:\Users\Sauka\OneDrive\Рабочий стол\Lab 8\Car\background_music.mp3")  
+pygame.mixer.music.load(r"C:\Users\User\Desktop\PP2\Lab 8\Car\background_music.mp3")  
 pygame.mixer.music.set_volume(0.5)
 pygame.mixer.music.play(-1, 0.0)
 
@@ -45,7 +45,7 @@ pygame.mixer.music.play(-1, 0.0)
 class Enemy(pygame.sprite.Sprite):
       def __init__(self):
         super().__init__() 
-        self.image = pygame.image.load(r"C:\Users\Sauka\OneDrive\Рабочий стол\Lab 8\Car\Enemy.png")
+        self.image = pygame.image.load(r"C:\Users\User\Desktop\PP2\Lab 8\Car\Enemy.png")
 
         self.rect = self.image.get_rect()
         self.rect.center = (random.randint(40,SCREEN_WIDTH-40), 0)
@@ -62,7 +62,7 @@ class Enemy(pygame.sprite.Sprite):
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__() 
-        self.image = pygame.image.load(r"C:\Users\Sauka\OneDrive\Рабочий стол\Lab 8\Car\Player.png")
+        self.image = pygame.image.load(r"C:\Users\User\Desktop\PP2\Lab 8\Car\Player.png")
 
         self.rect = self.image.get_rect()
         self.rect.center = (160, 520)
@@ -80,7 +80,7 @@ class Player(pygame.sprite.Sprite):
 class Coin(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__() 
-        self.image = pygame.image.load(r"C:\Users\Sauka\OneDrive\Рабочий стол\Lab 8\Car\coin.png")
+        self.image = pygame.image.load(r"C:\Users\User\Desktop\PP2\Lab 8\Car\coin.png")
 
         self.image = pygame.transform.scale(self.image, (30, 30)) 
         self.rect = self.image.get_rect()
@@ -91,7 +91,7 @@ class Coin(pygame.sprite.Sprite):
         self.rect.move_ip(0,SPEED_Coin)
 
         if pygame.sprite.spritecollide(P1, coins, True): #When coin is collected, coin disappears
-            pygame.mixer.Sound(r"C:\Users\Sauka\OneDrive\Рабочий стол\Lab 8\Car\Coin.wav").play()        #and score is increased by 1 point
+            pygame.mixer.Sound(r"C:\Users\User\Desktop\PP2\Lab 8\Car\Coin.wav").play()        #and score is increased by 1 point
             SCORE_Coin += 1
             new_coin = Coin()          #If coin is collected this code helps to create a new coin
             coins.add(new_coin)
@@ -147,7 +147,7 @@ while True:
     
     #To be run if collision occurs between Player and Enemy
       if pygame.sprite.spritecollideany(P1, enemies):
-            pygame.mixer.Sound(r"C:\Users\Sauka\OneDrive\Рабочий стол\Lab 8\Car\crash.wav").play()
+            pygame.mixer.Sound(r"C:\Users\User\Desktop\PP2\Lab 8\Car\crash.wav").play()
             
             pygame.mixer.music.stop()
 

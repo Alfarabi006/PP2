@@ -29,7 +29,7 @@ class Wall:
     def __init__(self, level):
         self.body = []
         level = level % MAX_LEVEL
-        f = open(r"C:\Users\Sauka\OneDrive\Рабочий стол\Lab 8\Snake\levels\level{}.txt".format(level), "r")
+        f = open(r"C:\Users\User\Desktop\PP2\Lab 9\Snake\levels\level{}.txt".format(level), "r")
         
         for y in range(0, HEIGHT//BLOCK_SIZE + 1):
             for x in range(0, WIDTH//BLOCK_SIZE + 1):

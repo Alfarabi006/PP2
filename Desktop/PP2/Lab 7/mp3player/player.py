@@ -5,7 +5,7 @@ pygame.init()
 screen = pygame.display.set_mode((400, 300))
 done = False
 
-path = 'C:/Users/Sauka/OneDrive/Рабочий стол/Lab 7/mp3player/musics'
+path = 'C:\Users\User\Desktop\PP2\Lab 7\mp3player\musics'
 musiclist = os.listdir(path)
 order = 0
 
